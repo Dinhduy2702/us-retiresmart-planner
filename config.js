@@ -14,12 +14,12 @@ window.RETIRESMART_CONFIG = {
     soloTaxUrl: "https://dinhduy2702.github.io/us-solotax-planner/",
     propYieldUrl: "https://dinhduy2702.github.io/us-propyield-analyzer/",
     youtubeFinance: {
-      label: "Watch US FIRE & Tax Guides",
-      url: "" // AGY 3 cap nhat link kenh YT Finance EN khi lap xong
+      label: "US Money & 1099 Bundle ($29 · Save $14)",
+      url: "https://897833387907.gumroad.com/l/us-money-1099-tax-bundle-2026"
     },
     gumroadWealthOs: {
-      label: "US Personal Finance & Wealth OS (2026 Sheets)",
-      url: "" // AGY 5 cap nhat link Gumroad SP #2 khi xong
+      label: "Get Wealth OS ($0 Lite / $19 Full)",
+      url: "https://897833387907.gumroad.com/l/us-personal-finance-wealth-os-2026"
     }
   },
   affiliates: [
