@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://dinhduy2702.github.io/us-retiresmart-planner/sitemap.xml
