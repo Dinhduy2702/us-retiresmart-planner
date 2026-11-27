@@ -5,20 +5,20 @@
   const STATE_KEY = "retiresmart_us_state_v1";
   const CONFIG = window.RETIRESMART_CONFIG;
 
-  const STD_DED_2026 = { single: 15000, married: 30000 };
+  const STD_DED_2026 = { single: 16100, married: 32200 };
   const BRACKETS_2026 = {
     single: [
-      { upTo: 11925, rate: 0.10 },
-      { upTo: 48475, rate: 0.12 },
-      { upTo: 103350, rate: 0.22 },
-      { upTo: 197300, rate: 0.24 },
+      { upTo: 12400, rate: 0.10 },
+      { upTo: 50400, rate: 0.12 },
+      { upTo: 105700, rate: 0.22 },
+      { upTo: 201775, rate: 0.24 },
       { upTo: Infinity, rate: 0.32 }
     ],
     married: [
-      { upTo: 23850, rate: 0.10 },
-      { upTo: 96950, rate: 0.12 },
-      { upTo: 206700, rate: 0.22 },
-      { upTo: 394600, rate: 0.24 },
+      { upTo: 24800, rate: 0.10 },
+      { upTo: 100800, rate: 0.12 },
+      { upTo: 211400, rate: 0.22 },
+      { upTo: 403550, rate: 0.24 },
       { upTo: Infinity, rate: 0.32 }
     ]
   };
@@ -48,7 +48,7 @@
     roth401k: [
       { label: "High Earner (29% Now -> 16% Ret)", set: { rt4Contrib: 18000, rt4Years: 25, rt4CurTax: 29, rt4RetTax: 16, rt4Return: 8.0 } },
       { label: "Early Career (15% Now -> 24% Ret)", set: { rt4Contrib: 10000, rt4Years: 32, rt4CurTax: 15, rt4RetTax: 24, rt4Return: 8.5 } },
-      { label: "Max 2026 ($23.5k · 24% -> 18%)", set: { rt4Contrib: 23500, rt4Years: 20, rt4CurTax: 24, rt4RetTax: 18, rt4Return: 8.0 } }
+      { label: "Max 2026 ($24.5k · 24% -> 18%)", set: { rt4Contrib: 24500, rt4Years: 20, rt4CurTax: 24, rt4RetTax: 18, rt4Return: 8.0 } }
     ],
     ladder: [
       { label: "Married FIRE (Age 45 · $60k/yr)", set: { ldRetireAge: 45, ldFiling: "married", ldTradBal: 750000, ldConvertAmt: 60000, ldAnnualSpend: 55000, ldGrowth: 6.0 } },
@@ -122,7 +122,7 @@
   }
 
   function calcFedTax2026(grossIncome, filing) {
-    const ded = STD_DED_2026[filing] || 15000;
+    const ded = STD_DED_2026[filing] || 16100;
     const taxable = Math.max(0, grossIncome - ded);
     const brackets = BRACKETS_2026[filing] || BRACKETS_2026.single;
     let tax = 0;
